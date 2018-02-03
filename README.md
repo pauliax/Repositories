@@ -68,25 +68,35 @@ _RIPv1 - maršrutizavimo algoritmo realizacija_
 
 _Pasirinktos dalykinės srities duomenų aprašymo kalba turite parengti prasmingą XML dokumentą su laisvai pasirinktais duomenimis bei savo susikurta vardų galiojimo sritimi (namespace). Turi būti tenkinami šie reikalavimai:
 
-* XML dokumentas turi būti apytiksliai A4 lapo dydžio, tvarkingai suformatuotas, turėti ne mažiau nei 10 skirtingų žymių, šakninė žymė privalo turėti proanūkių.
-* Turi būti panaudoti bent trys skirtingi prasmingi atributai. 
-* Turi būti panaudoti šie duomenų tipai:
+XML dokumentas turi būti apytiksliai A4 lapo dydžio, tvarkingai suformatuotas, turėti ne mažiau nei 10 skirtingų žymių, šakninė žymė privalo turėti proanūkių.
+
+Turi būti panaudoti bent trys skirtingi prasmingi atributai. 
+
+Turi būti panaudoti šie duomenų tipai:
 Eilutė (angl. string)
 Sveikasis skaičius
 Skaičius su slankiuoju kableliu (rašykite tašką, pvz: 100.53)
 Data tam tikru formatu (pvz., YYYY-MM-DD, DD/MM/YYYY, ir t.t.)
-* Visos dokumento žymės privalo priklausyti jūsų susikurtai vardų galiojimo sričiai, atributai neturi priklausyti jokiai vardų sričiai.
-* Žymėmis turi būti modeliuojami duomenų aprašai, o ne duomenys (žiūrėkite skaidrių apie XML pabaigą).
-* Būtina panaudoti tiek vardų srities pagal nutylėjimą žymėjimą, tiek išreikštinį vardų srities nurodymą - su prefiksu (t.y., daliai dokumento žymių nurodykite vardų sritį pagal nutylėjimą, daliai vardų sritį nurodykite išreikštinai)
-* Sukurtą XML dokumentą reikia pateikti ir JSON duomenų apsikeitimo formatu, t.y. sukurti analogiškus (kaip ir XML dokumente) duomenis talpinantį JSON dokumentą.
+
+Visos dokumento žymės privalo priklausyti jūsų susikurtai vardų galiojimo sričiai, atributai neturi priklausyti jokiai vardų sričiai.
+
+Žymėmis turi būti modeliuojami duomenų aprašai, o ne duomenys (žiūrėkite skaidrių apie XML pabaigą).
+
+Būtina panaudoti tiek vardų srities pagal nutylėjimą žymėjimą, tiek išreikštinį vardų srities nurodymą - su prefiksu (t.y., daliai dokumento žymių nurodykite vardų sritį pagal nutylėjimą, daliai vardų sritį nurodykite išreikštinai)
+
+Sukurtą XML dokumentą reikia pateikti ir JSON duomenų apsikeitimo formatu, t.y. sukurti analogiškus (kaip ir XML dokumente) duomenis talpinantį JSON dokumentą.
 
 XPath savo sukurtam XML dokumentui:
 
-* Pasirinkti savo XML dokumente vieną žymę (turinčią bent vieną protėvį, ir bent vieną anūką), parašyti XPath kelią, unikaliai nueinantį prie tos žymės, ir prie to kelio prirašyti dar vieną žingsnį, naudojant šias ašis: ancestor, descendant, following-sibling, preceding-sibling, following, preceding, attribute (po vieną pavyzdį kiekvienai ašiai), mokėti paaiškinti rezultatą
-* Parašyti XPath kelią su predikatu, kurio viduje yra panaudotas XPath kelias (pvz.: rasti visas žymes A, kurių atributas x turi tokią pačią reikšmę kaip penktos dokumente žymės B atributas y; čia A, B, x, y pakeiskite į savo dokumento žymes/atributus), paaiškinti predikato veikimo principą
-* Funkcijas count() ir sum() (pvz., suskaičiuoti, kiek yra tam tikrų žymių/atributų, susumuoti tam tikrų žymių turinį), gebėti paaiškinti, ką ir kodėl grąžina išraiška sum(//*)šiam XML dokumentui: <a><b>2</b><c>3</c></a> (dėstytojas pakeis XML dokumentą)
-* Operacijas <, =, + su skirtingų tipų operandais, ir paaiškinti, kaip apliekamas automatinis tipų konvertavimas (pvz. mokėti paaiškinti, kaip apskaičiuojamas išraiškos 5 < "kuku" rezultatas).
-* Reikia parašyti trijų žingsnių XPath išraišką (turi būti naudojamas bent vienas predikatas ir dvi skirtingos ašys) ir į atsiskaitymą atsinešti nupieštas aibes, kurios sukuriamos kiekvieno žingsnio apdorojimo rezultate
+Pasirinkti savo XML dokumente vieną žymę (turinčią bent vieną protėvį, ir bent vieną anūką), parašyti XPath kelią, unikaliai nueinantį prie tos žymės, ir prie to kelio prirašyti dar vieną žingsnį, naudojant šias ašis: ancestor, descendant, following-sibling, preceding-sibling, following, preceding, attribute (po vieną pavyzdį kiekvienai ašiai), mokėti paaiškinti rezultatą
+
+Parašyti XPath kelią su predikatu, kurio viduje yra panaudotas XPath kelias (pvz.: rasti visas žymes A, kurių atributas x turi tokią pačią reikšmę kaip penktos dokumente žymės B atributas y; čia A, B, x, y pakeiskite į savo dokumento žymes/atributus), paaiškinti predikato veikimo principą
+
+Funkcijas count() ir sum() (pvz., suskaičiuoti, kiek yra tam tikrų žymių/atributų, susumuoti tam tikrų žymių turinį), gebėti paaiškinti, ką ir kodėl grąžina išraiška sum(//*)šiam XML dokumentui: <a><b>2</b><c>3</c></a> (dėstytojas pakeis XML dokumentą)
+
+Operacijas <, =, + su skirtingų tipų operandais, ir paaiškinti, kaip apliekamas automatinis tipų konvertavimas (pvz. mokėti paaiškinti, kaip apskaičiuojamas išraiškos 5 < "kuku" rezultatas).
+
+Reikia parašyti trijų žingsnių XPath išraišką (turi būti naudojamas bent vienas predikatas ir dvi skirtingos ašys) ir į atsiskaitymą atsinešti nupieštas aibes, kurios sukuriamos kiekvieno žingsnio apdorojimo rezultate
 parašyti išraišką, su operatoriumi = arba != lyginančią:
 aibę ir skaičių,
 aibę ir eilutę,
@@ -99,72 +109,104 @@ parašyti išraišką, su operatoriais <, > lyginančią dvi aibes ir mokėti pa
 
 _Reikia parašyti XML Schema dokumentą, apibrėžiantį jūsų sukurto XML dokumento struktūrą, kuriame būtų jūsų pačių susikurti:
 
-* Paprastas tipas, apribojantis kokį nors Schema standartinį tipą,
-* Prasmingas sąrašo tipas (list type). Neprasmingo sąrašo tipo pavyzdys: sąrašas iš string tipo elementų. Neprasmingas todėl, kad jį galima pakeisti vienu paprastu tipu: string.
-* Sudėtingi tipai su paprastu turiniu,
+Paprastas tipas, apribojantis kokį nors Schema standartinį tipą,
+
+Prasmingas sąrašo tipas (list type). Neprasmingo sąrašo tipo pavyzdys: sąrašas iš string tipo elementų. Neprasmingas todėl, kad jį galima pakeisti vienu paprastu tipu: string.
+
+Sudėtingi tipai su paprastu turiniu,
 išvesti apribojimu (restriction) iš jūsų (ne XML Schema) bazinio tipo
 išvesti praplėtimu (extension) iš jūsų bazinio tipo
-* Sudėtingi tipai su sudėtingu turiniu,
+
+Sudėtingi tipai su sudėtingu turiniu,
 išvesti apribojimu (restriction) iš jūsų bazinio tipo
 išvesti praplėtimu (extension) iš jūsų bazinio tipo
-* Pademonstruoti apribojimo principą - parodyti pavyzdį, kai apribojimo principas pažeistas, ir žinoti, kaip reikia pataisyti pavyzdį,
-* Sudėtingas tipas su mišriu turiniu,
-* choice valdymo struktūra,
-* Bent viena nuoroda (keyref) į unikalumo ribojimą (unique) arba raktą (key)
-* Visi jūsų susikurti tipai turi priklausyti jūsų vardų sričiai
+
+Pademonstruoti apribojimo principą - parodyti pavyzdį, kai apribojimo principas pažeistas, ir žinoti, kaip reikia pataisyti pavyzdį,
+
+Sudėtingas tipas su mišriu turiniu,
+
+choice valdymo struktūra,
+
+Bent viena nuoroda (keyref) į unikalumo ribojimą (unique) arba raktą (key)
+
+Visi jūsų susikurti tipai turi priklausyti jūsų vardų sričiai
 
 Reikia parašyti JSON Schema (draft-wright-json-schema-01) dokumentą, apibrėžiantį jūsų sukurto JSON dokumento struktūrą, kuriame būtų:
 
-* Panaudoti bent 4 skirtingi duomenų tipai
-* Panaudotas enum raktažodis
-* Panaudoti bent 4 validacijai skirti raktažodžiai
-* Panaudotos bent 2 reguliarios išraikos
-* Realizuotas schemų praplėtimas naudojantis allOf, anyOf, oneOf raktažodžiais
-* Realizuotas schemų pakartotinis panaudojimas: definitions ir $ref raktažodžiai_
+Panaudoti bent 4 skirtingi duomenų tipai
+
+Panaudotas enum raktažodis
+
+Panaudoti bent 4 validacijai skirti raktažodžiai
+
+Panaudotos bent 2 reguliarios išraikos
+
+Realizuotas schemų praplėtimas naudojantis allOf, anyOf, oneOf raktažodžiais
+
+Realizuotas schemų pakartotinis panaudojimas: definitions ir $ref raktažodžiai_
 
 * IT 3 užduotis - HTML ir CSS
 
 _Reikia parašyti HTML puslapį, kuriame būtų naudojamos tik struktūrinės žymės (išvardintos HTML5 dokumente). Negalima naudoti puslapio stilių nusakančių žymių bei atributų (color, font, size, ir panašiai). Stiliaus aprašymui reikia sukurti stilių lentelę, aprašytą atskirame faile. Turi būti patenkinti šie reikalavimai:
 
-* Dokumentas privalo būti validus HTML5 dokumentas. Validatoriai:
+Dokumentas privalo būti validus HTML5 dokumentas. Validatoriai:
 http://validator.nu
 http://validator.w3.org
-* Elementų išdėstymas dokumente privalo būti sumodeliuotas naudojantis semantiniais HTML5 elementais (header, nav, section, articile, ...)
-* Būtina pademonstruoti šių HTML elementų panaudojimą:
+
+Elementų išdėstymas dokumente privalo būti sumodeliuotas naudojantis semantiniais HTML5 elementais (header, nav, section, articile, ...)
+
+Būtina pademonstruoti šių HTML elementų panaudojimą:
 Skyrius ir paragrafas
 Paveiksliukas
 Nuoroda į kitą puslapį
 Lentelė su prasmingais panaudotais colspan ir rowspan atributais
 Numeruotas ir/ar nenumeruotas sąrašas
-* Duomenų įvedimo forma, kurioje prasmingai panaudoti bent 5 skirtingų tipų įvedimo laukai. Pademonstruoti privalomų laukų validaciją.
-* Sąrašo (pasirinkimo) komponentas
-* Reikia panaudoti šiuos CSS selektorius (ir mokėti paaiškinti, kuo pirmas skiriasi nuo antro, bei ką jie visi reiškia):
+
+Duomenų įvedimo forma, kurioje prasmingai panaudoti bent 5 skirtingų tipų įvedimo laukai. Pademonstruoti privalomų laukų validaciją.
+
+Sąrašo (pasirinkimo) komponentas
+
+Reikia panaudoti šiuos CSS selektorius (ir mokėti paaiškinti, kuo pirmas skiriasi nuo antro, bei ką jie visi reiškia):
 Įpėdinio (descendant);
 Vaiko (child);
 Atributo (attribute);
 Klasės (class);
 ID
-* Sukurtoje stilių lentelėje turi būti savybių paveldėjimo pavyzdys, t.y., būtina prasmingai panaudoti raktinį žodį inherit (ištrynus šį raktinį žodį, vaizdas ekrane turi pasikeisti) ir žinoti, ką jis reiškia
-* Sukurtoje stilių lentelėje turi būti kaskadų mechanizmo pavyzdys, būtina prasmingai panaudoti raktinį žodį !important (ištrynus šį raktinį žodį, vaizdas ekrane turi pasikeisti), bei žinoti, ką jis reiškia ir kas yra tas kaskadų mechanizmas
-* Reikia panaudoti @media taisyklę, kurios pagalba naršyklė atsižvelgtų į įrenginio, kuriame yra atvaizduojamas puslapis ekrano dydį ir atitinkimai pakeistų jo išdėstymą (Media Queries Level 3)_
+
+Sukurtoje stilių lentelėje turi būti savybių paveldėjimo pavyzdys, t.y., būtina prasmingai panaudoti raktinį žodį inherit (ištrynus šį raktinį žodį, vaizdas ekrane turi pasikeisti) ir žinoti, ką jis reiškia
+
+Sukurtoje stilių lentelėje turi būti kaskadų mechanizmo pavyzdys, būtina prasmingai panaudoti raktinį žodį !important (ištrynus šį raktinį žodį, vaizdas ekrane turi pasikeisti), bei žinoti, ką jis reiškia ir kas yra tas kaskadų mechanizmas
+
+Reikia panaudoti @media taisyklę, kurios pagalba naršyklė atsižvelgtų į įrenginio, kuriame yra atvaizduojamas puslapis ekrano dydį ir atitinkimai pakeistų jo išdėstymą (Media Queries Level 3)_
 
 * IT 4 užduotis - JavaScript
 
 _Reikia sukurti HTML puslapį, kuriame būtų bent viena duomenų įvedimo forma ir bent viena lentelė. Tuomet atskirame JavaScript faile reikia parašyti skriptus, kuriuose būtų realizuotas:
 
-* Formos laukų validavimas:
+Formos laukų validavimas:
+
 Įvedimo laukas, kuriame kažkas turi būti įvesta (kuris negali būti paliktas tuščias)
+
 Įvedimo laukas, kuriame turi būti įvestas sveikas teigiamas skaičius
+
 Įvedimo laukas (-ai), kuriame (-iuose) turi būti įvesta teisinga data (metai, mėnuo, diena) (pvz. vasaris negali turėti 30 dienų); būtina naudoti Date objektą
-* HTML puslapio elementų paslėpimas/parodymas (ne išmetimas) panaudojant CSS savybę display, priklausomai nuo to, kas įvesta kokiame nors formos lauke (būtina naudoti jQuery biblioteką);
-* HTML puslapio dinaminis turinio modifikavimas (būtina naudoti jQuery biblioteką):
-* Egzistuojančių HTML dokumento žymių tekstinio turinio pakeitimas (pvz. paragrafo teksto pakeitimas)
-* Egzistuojančių žymių stiliaus pakeitimas (atributui style priskiriant naują reikšmę)
-* Egzistuojančių žymių išmetimas (pvz. ištrinti įvedimo lauke numeriu nurodytą paragrafą)
-* Naujų žymių įterpimas (pvz. teksto gale pridėti paragrafą su tekstu, įvestu įvedimo lauke)
-* Asinchroninis komunikavimas su nutolusiu serveriu:
+
+HTML puslapio elementų paslėpimas/parodymas (ne išmetimas) panaudojant CSS savybę display, priklausomai nuo to, kas įvesta kokiame nors formos lauke (būtina naudoti jQuery biblioteką);
+
+HTML puslapio dinaminis turinio modifikavimas (būtina naudoti jQuery biblioteką):
+
+Egzistuojančių HTML dokumento žymių tekstinio turinio pakeitimas (pvz. paragrafo teksto pakeitimas)
+
+Egzistuojančių žymių stiliaus pakeitimas (atributui style priskiriant naują reikšmę)
+
+Egzistuojančių žymių išmetimas (pvz. ištrinti įvedimo lauke numeriu nurodytą paragrafą)
+
+Naujų žymių įterpimas (pvz. teksto gale pridėti paragrafą su tekstu, įvestu įvedimo lauke)
+
+Asinchroninis komunikavimas su nutolusiu serveriu:
 Įvedimo formoje pateiktų duomenų serializavimas JSON formatu ir patalpinimas vienoje iš šių sistemų (naudojantis pateikiamu API):
 http://myjson.com/api
 https://jsonblob.com/api
+
 Duomenų (JSON formatu) išsitraukimas iš aukščiau nurodytų sistemų
 Gautų duomenų atvaizdavimas HTML puslapio lentelėje_
